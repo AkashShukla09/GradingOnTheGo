@@ -240,14 +240,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 600;
   display: inline-block;
-  border: 1px solid #2347ab;
-  background: linear-gradient(to left, transparent 50%, #2347ab 50%) right;
+  border: 1px solid #f9ca20ab;
+  background: linear-gradient(to left, transparent 50%, #f9ca20 50%) right;
   background-size: 200%;
   transition: .5s ease-out;
 }
 
 .get-started-btn:hover {
-  border-color: #2347ab;
+  border-color: #f9ca20;
   color: #fff;
   background-position: left;
 }
@@ -576,8 +576,8 @@ section {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: #e7f1fd;
-  color: #106eea;
+  background: #3F3F3F;
+  color: #f9ca20;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -590,7 +590,7 @@ section {
 }
 
 .section-title h3 span {
-  color: #106eea;
+  color: #f9ca20;
 }
 
 .section-title p {
@@ -611,6 +611,31 @@ section {
   background: #e9e9e9;
   /*border-left: 10px solid #f9ca20;*/
 }
+
+.about a {
+  font-family: "Raleway", sans-serif;
+  width: 130px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #3F3F3F;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #f9ca20;
+}
+
+.about a:hover {
+  background: #f9ca20;
+  color: #3F3F3F;
+  text-decoration: none;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
