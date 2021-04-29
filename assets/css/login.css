@@ -1,10 +1,10 @@
 html {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../img/banner1.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/banner1.png');
 }
 body {
   font-family: "Open Sans", sans-serif;
   color: #3f3f3f;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../img/banner1.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/banner1.png');
 ;
 }
 
@@ -436,8 +436,10 @@ section {
 
 .contact .php-email-form {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(7px);
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(9px);
+  border-radius: 15px;
+  border: 1px solid #000;
 }
 
 .contact .php-email-form .validate {
