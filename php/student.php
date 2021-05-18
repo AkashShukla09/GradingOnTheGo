@@ -12,7 +12,8 @@
        $stmt = $conn->prepare("insert into student(name, reg, email) values(?, ?, ?)");
        $stmt->bind_param("sss", $name , $reg , $email);
        $stmt->execute();
-       echo 'done';
+       echo 'Data Saved';
+       echo "<div class='text-center'><button style='background: white;' type='submit'><a href='course.html' style='color: black; text-decoration: none;'>Enter Campus Details</a></button></div>";
        $stmt->close();
        $conn->close();
    }

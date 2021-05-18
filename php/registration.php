@@ -1,12 +1,14 @@
 <?php
-
-    include 'dbconn.php';
-
-    if(isset($_POST['submit'])){
-        $reg = mysqli_real_escape_string($con, $_POST['reg']);
-        $email = mysqli_real_escape_string($con, $_POST['email']);
-        $pass = mysqli_real_escape_string($con, $_POST['pass']);
+    $con = mysqli_connect("localhost","root","");
+    if (!$con)
+    {
+        die("Error Connecting to DB".mysqli_connect_error());
     }
+    $db=mysqli_select_db($con,"osp");
+
+    $reg = $_POST['reg'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
 
 
     $emailquery = " select * from user where email = '$email' ";
@@ -22,21 +24,14 @@
 
         $iquery = mysqli_query($con , $insert);
 
-         if ($iquery) {
-        ?>
-        <script>
-            alert("Inserted Successful");
-        </script>
-        <?php
-        }else{
-            ?>
-            <script>
-                alert("Error");
-            </script>
-            <?php
+        if ($iquery) {
+            echo "Sign Up Successful";
+            echo "<div class='text-center'><button style='background: white;' type='submit'><a href='login.html' style='color: black; text-decoration: none;'>Login</a></button></div>";
+        }
+        else{
+            echo "Error";
         }
        
-        
     }
 
 ?>
