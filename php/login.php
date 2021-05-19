@@ -21,8 +21,11 @@
     }
     else {
         echo "Login Successful";
-        echo "<div class='text-center'><button style='background: white;' type='submit'><a href='student.html' style='color: black; text-decoration: none;'>Enter Student Details</a></button></div>";
+
+        echo "<div class='text-center'><button style='background: white;' type='submit'><a href='student.html' style='color: black; text-decoration: none;'>Enter New Marks</a></button></div>";
+
+        echo "<div class='text-center'><button style='background: white; margin-top: 15px;' type='submit'><a href='report.html' style='color: black; text-decoration: none;'>Already Entered Marks</a></button></div>";
+        
        
     }
-
 ?>
