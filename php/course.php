@@ -68,6 +68,16 @@
            echo "ms2: $meansquare <br>";
            $msf=sqrt($meansquare);
            echo "msf: $msf <br>";
+
+           echo "<div style='overflow-x: auto;'> <table border='2'> <thead> <th>Strength</th> <th>Max. Marks</th> <th>Average</th> <th>Standard Deviation</th> </thead>";
+           echo "<tr>";
+           echo "<td> $count </td>";
+           echo "<td> Max </td>";
+           echo "<td> $avg </td>"; 
+           echo "<td> $msf </td>";
+           echo "</tr>"; 
+           echo "</table></div>";
+
         }
 
         else {
