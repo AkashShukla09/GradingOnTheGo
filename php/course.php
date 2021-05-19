@@ -81,7 +81,7 @@
            echo "<td style='padding: 5px; text-align: center;'> $msf </td>";
            echo "</tr>"; 
            echo "</table></div>";
-           echo "<br><br><br>";
+           echo "<br>";
 
 
            echo "Grade Table: <br>";
@@ -99,6 +99,19 @@
            {
              $b=0;
            }
+           if($c<0)
+           {
+             $c=0;
+           }
+           if($d<0)
+           {
+             $d=0;
+           }
+           if($e<0)
+           {
+             $e=0;
+           }
+           
 
            echo "<td style='padding: 5px; text-align: center;'> >$s </td>";
            echo "<td style='padding: 5px; text-align: center;'> >$a </td>";
