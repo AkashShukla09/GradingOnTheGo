@@ -69,12 +69,12 @@
            $msf=sqrt($meansquare);
            echo "msf: $msf <br>";
 
-           echo "<div style='overflow-x: auto;'> <table border='2'> <thead> <th>Strength</th> <th>Max. Marks</th> <th>Average</th> <th>Standard Deviation</th> </thead>";
+           echo "<div style='overflow-x: auto;'> <table border='2'> <thead> <th style='padding: 5px;'>Strength</th> <th style='padding: 5px;'>Max. Marks</th> <th style='padding: 5px;'>Average</th> <th style='padding: 5px;'>Standard Deviation</th> </thead>";
            echo "<tr>";
-           echo "<td> $count </td>";
-           echo "<td> Max </td>";
-           echo "<td> $avg </td>"; 
-           echo "<td> $msf </td>";
+           echo "<td style='padding: 5px;'> $count </td>";
+           echo "<td style='padding: 5px;'> Max </td>";
+           echo "<td style='padding: 5px;'> $avg </td>"; 
+           echo "<td style='padding: 5px;'> $msf </td>";
            echo "</tr>"; 
            echo "</table></div>";
 
