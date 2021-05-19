@@ -32,7 +32,7 @@
         $count = mysqli_num_rows($query);
         $tot=0;
         // echo "$count";
-        echo 'Data Saved';
+        echo 'Data Saved<br>';
         
         if ($count > 0) {
             while($row = mysqli_fetch_array($query)) {
@@ -43,9 +43,9 @@
               //    "EMP SALARY : {$row['emp_salary']} <br> ".
               //    "--------------------------------<br>";
            }
-           echo "<br> $tot <br>";
+          //  echo "<br> $tot <br>";
            $avg = $tot/$count;
-           echo "$avg <br>";
+          //  echo "$avg <br>";
            $meansquare=0;
            // $i=1;
 
@@ -63,11 +63,11 @@
               //    "--------------------------------<br>";
                 // $i=$i+1;
            }
-           echo "ms: $meansquare <br>";
+          //  echo "ms: $meansquare <br>";
            $meansquare=$meansquare/$count;
-           echo "ms2: $meansquare <br>";
+          //  echo "ms2: $meansquare <br>";
            $msf=sqrt($meansquare);
-           echo "msf: $msf <br>";
+          //  echo "msf: $msf <br>";
            $avg=round($avg,2);
            $msf=round($msf,2);
 
