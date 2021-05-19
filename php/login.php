@@ -17,11 +17,11 @@
     
     if ($emailcount < 1) {
         echo "Email/Password does not exist";
-        echo "$emailcount";
+        // echo "$emailcount";
     }
     else {
         echo "Login Successful";
-        echo "<div class='text-center'><button style='background: white;' type='submit'><a href='campus.html' style='color: black; text-decoration: none;'>Enter Campus Details</a></button></div>";
+        echo "<div class='text-center'><button style='background: white;' type='submit'><a href='student.html' style='color: black; text-decoration: none;'>Enter Student Details</a></button></div>";
        
     }
 

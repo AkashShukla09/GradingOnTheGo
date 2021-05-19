@@ -1,9 +1,11 @@
 <?php
 
+    $reg = $_POST['reg'];
     $ccode = $_POST['ccode'];
     $cname = $_POST['cname'];
     $faculty = $_POST['faculty'];
     $slot = $_POST['slot'];
+    $exam = $_POST['exam'];
     $marks = $_POST['marks'];
 
    $conn = new mysqli('localhost', 'root', '', 'osp');
@@ -11,12 +13,21 @@
        die('connection failed  : '.$conn->connect_error);
     
    }else{
-       $stmt = $conn->prepare("insert into course(ccode, cname, faculty, slot, marks) values(?, ?, ?, ?, ?)");
-       $stmt->bind_param("ssssi", $ccode, $cname, $faculty, $slot, $marks);
+    $regquery = " select * from course where reg = '$reg' and ccode = '$ccode' and  exam = '$exam'";
+    $sql2 = mysqli_query($conn, $regquery);
+
+    $regcount = mysqli_num_rows($sql2);
+    
+    if ($regcount > 0) {
+        echo "You have already entered marks for the following subject and exam";
+    }
+    else {
+       $stmt = $conn->prepare("insert into course(reg, ccode, cname, faculty, slot, exam, marks) values(?, ?, ?, ?, ?, ?, ?)");
+       $stmt->bind_param("ssssssi", $reg, $ccode, $cname, $faculty, $slot, $exam, $marks);
        $stmt->execute();
 
 
-       $sql = " select marks from course where ccode = '$ccode' and cname = '$cname' and faculty = '$faculty' and slot = '$slot'";
+       $sql = " select marks from course where ccode = '$ccode' and faculty = '$faculty' and slot = '$slot'  and exam = '$exam'";
         $query = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($query);
         $tot=0;
@@ -65,9 +76,10 @@
 
 
        
-       echo "<div class='text-center'><button style='background: white;' type='submit'><a href='grade.html' style='color: black; text-decoration: none;'>Enter Campus Details</a></button></div>";
+       echo "<div class='text-center'><button style='background: white;' type='submit'><a href='grade.html' style='color: black; text-decoration: none;'>See Report</a></button></div>";
        $stmt->close();
        $conn->close();
    }
+  }
 
 ?>

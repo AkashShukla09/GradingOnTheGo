@@ -72,17 +72,24 @@
             <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" data-rule="minlen:8" data-msg="Please enter atleast 8 characters" />
             <div class="validate"></div>
           </div>
-          <div class="col-md-12 form-group">
-            <span style="color: white; font-size: 18px;">Registeration Number:</span>
-            <input type="text" name="reg" class="form-control" id="regno" placeholder="Enter Your VIT Registeration Number" data-rule="minlen:9" data-msg="Please enter valid Registeration Number" />
-            <div class="validate"></div>
-          </div>
+          
           <div class="col-md-12 form-group">
             <span style="color: white; font-size: 18px;">E-mail:</span>
             <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your VIT E-mail" data-rule="minlen:10" data-msg="Please enter your valid VIT E-mail" />
             <div class="validate"></div>
           </div>
           
+          <div class="col-md-12 form-group">
+            <span style="color: white; font-size: 18px;">Campus:</span>
+            <select name="campus" id="campus" required="1" class="form-control" style="background: rgba(255, 255, 255, 0.1); color: black;">
+              <option value="" disabled="1" selected="1" hidden="1">Choose Your Campus</option>
+              <option value="vellore">Vellore</option>
+              <option value="chennai">Chennai</option>
+              <option value="bhopal">Bhopal</option>
+              <option value="amravati">Amravati</option>
+            </select>
+            
+          </div>
         </div>
         
         <div class="mb-3">

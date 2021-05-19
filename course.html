@@ -69,6 +69,11 @@
       <form action="php/course.php" method="post" role="form" class="php-email-form mt-4">
         <div class="form-row">
           <div class="col-md-12 form-group">
+            <span style="color: white; font-size: 18px;">Registeration Number:</span>
+            <input type="text" name="reg" class="form-control" id="regno" placeholder="Enter Your VIT Registeration Number" data-rule="minlen:9" data-msg="Please enter valid Registeration Number" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-12 form-group">
             <span style="color: white; font-size: 18px;">Course Code:</span>
             <input type="text" name="ccode" class="form-control" id="ccode" placeholder="EXE1001" data-rule="minlen:7" data-msg="Please enter 7 characters" />
             <div class="validate"></div>
@@ -104,6 +109,22 @@
             </select>
             
           </div>
+
+          <div class="col-md-12 form-group">
+            <span style="color: white; font-size: 18px;">Examination:</span>
+            <select name="exam" id="exam" required="1" class="form-control" style="background: rgba(255, 255, 255, 0.1); color: black;">
+              <option value="" disabled="1" selected="1" hidden="1">Select Examination</option>
+              <option value="cat1">CAT-1</option>
+              <option value="cat2">CAT-2</option>
+              <option value="fat">FAT</option>
+              <option value="da1">DA-1</option>
+              <option value="da2">DA-2</option>
+              <option value="qui1">QUIZ-1</option>
+              <option value="qui2">QUIZ-2</option>
+            </select>
+            
+          </div>
+          
           <div class="col-md-12 form-group">
             <span style="color: white; font-size: 18px;">Enter Marks:</span>
             <input type="text" name="marks" class="form-control" id="marks" placeholder="Enter Your Marks Here" data-rule="maxlen:2" data-msg="Please enter valid marks" />
