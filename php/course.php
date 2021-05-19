@@ -130,7 +130,7 @@
 
 
        
-       echo "<div class='text-center'><button style='background: white;' type='submit'><a href='grade.html' style='color: black; text-decoration: none;'>See Report</a></button></div>";
+      //  echo "<div class='text-center'><button style='background: white;' type='submit'><a href='grade.html' style='color: black; text-decoration: none;'>See Report</a></button></div>";
        $stmt->close();
        $conn->close();
    }
