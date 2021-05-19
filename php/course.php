@@ -70,6 +70,9 @@
            echo "msf: $msf <br>";
            $avg=round($avg,2);
            $msf=round($msf,2);
+
+
+           echo "Subject Info: <br>";
            echo "<div style='overflow-x: auto;'> <table border='2'> <thead> <th style='padding: 5px;'>Strength</th> <th style='padding: 5px;'>Max. Marks</th> <th style='padding: 5px;'>Average</th> <th style='padding: 5px;'>Standard Deviation</th> </thead>";
            echo "<tr>";
            echo "<td style='padding: 5px; text-align: center;'> $count </td>";
@@ -78,7 +81,34 @@
            echo "<td style='padding: 5px; text-align: center;'> $msf </td>";
            echo "</tr>"; 
            echo "</table></div>";
+           echo "<br><br><br>";
 
+
+           echo "Grade Table: <br>";
+           echo "<div style='overflow-x: auto;'> <table border='2'> <thead> <th style='padding: 5px;'>S</th> <th style='padding: 5px;'>A</th> <th style='padding: 5px;'>B</th> <th style='padding: 5px;'>C</th><th style='padding: 5px;'>D</th> <th style='padding: 5px;'>E</th> <th style='padding: 5px;'>F</th></thead>";
+
+           echo "<tr>";
+           $s = round(($avg+1.5*$msf),0);
+           $a = round(($avg+0.5*$msf),0);
+           $b = round(($avg-0.5*$msf),0);
+           $c = round(($avg-1*$msf),0);
+           $d = round(($avg-1.5*$msf),0);
+           $e = round(($avg-2*$msf),0);
+
+           if($b<0)
+           {
+             $b=0;
+           }
+
+           echo "<td style='padding: 5px; text-align: center;'> >$s </td>";
+           echo "<td style='padding: 5px; text-align: center;'> >$a </td>";
+           echo "<td style='padding: 5px; text-align: center;'> >$b </td>"; 
+           echo "<td style='padding: 5px; text-align: center;'> >$c </td>";
+           echo "<td style='padding: 5px; text-align: center;'> >$d </td>";
+           echo "<td style='padding: 5px; text-align: center;'> >$e </td>";
+           echo "<td style='padding: 5px; text-align: center;'> <$e </td>";
+           echo "</tr>"; 
+           echo "</table></div>";
         }
 
         else {
