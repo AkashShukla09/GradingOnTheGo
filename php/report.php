@@ -47,7 +47,7 @@
            $meansquare=0;
            // $i=1;
 
-           $sql1 = " select marks from course where ccode = '$ccode' and faculty = '$faculty' and slot = '$slot'";
+           $sql1 = " select marks from course where ccode = '$ccode' and faculty = '$faculty' and slot = '$slot' and exam = '$exam' ";
            $query1 = mysqli_query($conn, $sql1);
 
           while($rows = mysqli_fetch_array($query1)) {
@@ -70,7 +70,7 @@
            $msf=round($msf,2);
 
            //max marks query
-           $sql2 = " select marks from course where ccode = '$ccode' and faculty = '$faculty' and slot = '$slot' order by marks desc limit 1";
+           $sql2 = " select marks from course where ccode = '$ccode' and faculty = '$faculty' and slot = '$slot' and exam = '$exam' order by marks desc limit 1";
            $query2 = mysqli_query($conn, $sql2);
            $max = 0;
 
