@@ -69,12 +69,23 @@
            $avg=round($avg,2);
            $msf=round($msf,2);
 
+           //max marks query
+           $sql2 = " select marks from course where ccode = '$ccode' and faculty = '$faculty' and slot = '$slot' order by marks desc limit 1";
+           $query2 = mysqli_query($conn, $sql2);
+           $max = 0;
+
+           while($rows2 = mysqli_fetch_array($query2)) {
+              
+            $max = $rows2['marks'];
+              
+           }
+
 
            echo "Subject Info: <br>";
            echo "<div style='overflow-x: auto;'> <table border='2'> <thead> <th style='padding: 5px;'>Strength</th> <th style='padding: 5px;'>Max. Marks</th> <th style='padding: 5px;'>Average</th> <th style='padding: 5px;'>Standard Deviation</th> </thead>";
            echo "<tr>";
            echo "<td style='padding: 5px; text-align: center;'> $count </td>";
-           echo "<td style='padding: 5px; text-align: center;'> Max </td>";
+           echo "<td style='padding: 5px; text-align: center;'> $max </td>";
            echo "<td style='padding: 5px; text-align: center;'> $avg </td>"; 
            echo "<td style='padding: 5px; text-align: center;'> $msf </td>";
            echo "</tr>"; 
