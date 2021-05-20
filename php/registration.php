@@ -39,7 +39,7 @@
     }
 
     }else{
-        echo "<p style='text-align: center;'> You are not a vit student <p>";
+        echo "<p style='text-align: center;'> Please Enter VIT Student E-mail ID<p>";
     }
 
 ?>
