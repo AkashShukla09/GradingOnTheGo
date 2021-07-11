@@ -6,7 +6,7 @@ if (!$con)
 }
 $db=mysqli_select_db($con,"osp");
 
-$sql = "CREATE table student (name varchar(25), email varchar(30), campus varchar(10))";
+$sql = "CREATE table student (name varchar(25), reg varchar(9), email varchar(30))";
 
 
 if (mysqli_query($con, $sql) )
